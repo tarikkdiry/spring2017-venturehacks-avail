@@ -26,7 +26,7 @@ function login() {
     if(domain != "stevens.edu"){
       var token = null
     }
-    
+
     // Here is where you would change what is showing on the screen (views)
     // and other actions that go along with being 'logged in'
     // With the 'user' object, we can get things like name, email, photoURL ...
@@ -36,6 +36,13 @@ function login() {
     userIconImg.src = user.photoURL;
 
     // You are now signed in! Do with it what you like!
+    firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      window.location.replace(http://localhost:3000/avail);
+    } else {
+      window.location.replace(http://localhost:3000/);
+    }
+});
 
   }).catch(function (error) {
     // Handle Errors here.
