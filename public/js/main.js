@@ -20,7 +20,13 @@ function login() {
 
     // The signed-in user info.
     var user = result.user;
+    var email = user.email;
+    var domain = email.replace(/.*@/, "");
 
+    if(domain != "stevens.edu"){
+      var token = null
+    }
+    
     // Here is where you would change what is showing on the screen (views)
     // and other actions that go along with being 'logged in'
     // With the 'user' object, we can get things like name, email, photoURL ...
