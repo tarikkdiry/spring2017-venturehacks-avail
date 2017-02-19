@@ -30,7 +30,7 @@
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center"><br><img src="../img/avail-whiteLogo.png" height="25%" width="25%"><br></h1>
+        <h1 class="header center"><br><br><br><img src="../img/avail-whiteLogo.png" height="25%" width="25%"><br></h1>
         <h5 class="header col s12 light center">Classroom Reservation Form<br><br><br></h5>
         <div class="row">
             <form onsubmit='return false' method='post'>
@@ -73,7 +73,7 @@
                 </div>
                 <div class="input-field col s3" id='burchard'>
                   <label><p><br> &nbsp; &nbsp; Room</p></label>
-                  <select class="browser-default black-text" id='burchard'>
+                  <select class="browser-default black-text" id='burchard' onchange=dropdown('burchard')>
                     <option value='b118'>B118</option>
                     <option value='b123'>B123</option>
                     <option value='b126'>B126</option>
@@ -89,7 +89,7 @@
                 </div>
                 <div class="input-field col s3" id='babbio'>
                   <label><p><br> &nbsp; &nbsp; Room</p></label>
-                  <select class="browser-default black-text" id='babbio'>
+                  <select class="browser-default black-text" id='babbio' onchange=dropdown('babbio')>
                     <option value='bc104'>BC104</option>
             				<option value='bc110'>BC110</option>
             				<option value='bc122'>BC122</option>
@@ -114,14 +114,14 @@
                 </div>
                 <div class="input-field col s3" id='carnegie'>
                   <label><p><br> &nbsp; &nbsp; Room</p></label>
-                  <select class="browser-default black-text" id='carnegie'>
+                  <select class="browser-default black-text" id='carnegie' onchange=dropdown('carnegie')>
                     <option value='c315'>C315</option>
             				<option value='c316'>C316</option>
                   </select>
                 </div>
                 <div class="input-field col s3" id="eas">
                   <label><p><br> &nbsp; &nbsp; Room</p></label>
-                  <select class="browser-default black-text" id="eas">
+                  <select class="browser-default black-text" id="eas" onchange=dropdown('eas')>
                     <option value='e130'>E130</option>
             				<option value='e222'>E222</option>
             				<option value='e229'>E229</option>
@@ -134,7 +134,7 @@
                 </div>
                 <div class="input-field col s3" id='kidde'>
                   <label><p><br> &nbsp; &nbsp; Room</p></label>
-                  <select class="browser-default black-text" id='kidde'>
+                  <select class="browser-default black-text" id='kidde' onchange=dropdown('kidde')>
                     <option value='k228'>K228</option>
             				<option value='k360'>K360</option>
             				<option value='k390'>K390</option>
@@ -142,13 +142,13 @@
                 </div>
                 <div class="input-field col s3" id='lieb'>
                   <label><p><br> &nbsp; &nbsp; Room</p></label>
-                  <select class="browser-default black-text" id='lieb'>
+                  <select class="browser-default black-text" id='lieb' onchange=dropdown('lieb')>
                     <option value="l120">L120</option>
                   </select>
                 </div>
                 <div class="input-field col s3" id='morton'>
                   <label><p><br> &nbsp; &nbsp; Room</p></label>
-                  <select class="browser-default black-text" id='morton'>
+                  <select class="browser-default black-text" id='morton' onchange=dropdown('morton')>
                     <option value='m103'>M103</option>
             				<option value='m105'>M105</option>
             				<option value='m205'>M205</option>
@@ -157,7 +157,7 @@
                 </div>
                 <div class="input-field col s3" id='pierce'>
                   <label><p><br> &nbsp; &nbsp; Room</p></label>
-                  <select class="browser-default black-text" id='pierce'>
+                  <select class="browser-default black-text" id='pierce' onchange=dropdown('pierce')>
                     <option value='p116'>P116</option>
             				<option value='p120'>P120</option>
             				<option value='p216'>P216</option>
@@ -167,7 +167,7 @@
                 </div>
                 <div class="input-field col s3" id='mclean'>
                   <label><p><br> &nbsp; &nbsp; Room</p></label>
-                  <select class="browser-default black-text" id='pierce'>
+                  <select class="browser-default black-text" id='mclean' onchange=dropdown('mclean')>
                     <option value='x104'>X104</option>
             				<option value='x105'>X105</option>
             				<option value='x106'>X106</option>
@@ -209,7 +209,7 @@
                 <form class="col s12">
                   <div class="row">
                     <div class="col s5">
-                      <p><br><br><br><br><br><br><br><p>
+                      <p><br><br><br><br><br><br><br><br><p>
                     </div>
                     <div class="col s2">
                       <p><br></p>
@@ -232,36 +232,50 @@
   <div class="container">
     <div class="section">
       <div class="row">
+        <h5 class="header col s12 light center">Classroom Reservation Form<br><br><br></h5>
+      <div>
+      <div class="row">
         <div class="col s1">
         </div>
         <div class="col s10">
-
-          <table id="myTableData" class="striped">
+          <table id="myTableData">
             <thead>
               <tr>
                 <th>Reserver</th>
                 <th>Location</th>
-                <th>Date</th>
-                <th>Time</th>
+                <th>Start Date & Time</th>
+                <th>End Time</th>
                 <th>Reason</th>
               </tr>
             </thead>
             <tbody>
               <tr>
+                <td>Tarik Kdiry</td>
+                <td>L120</td>
+                <td>2015-12-20 4:00</td>
+                <td>4:50</td>
+                <td>Studying for Diff Eq</td>
+              </tr>
+              <tr>
+                <td>Dhru Patel</td>
+                <td>M103</td>
+                <td>2016-01-22 3:00</td>
+                <td>4:30</td>
+                <td>Studying for Chemistry</td>
+              </tr>
+              <tr>
                 <td>Austin Rocha</td>
                 <td>BC212</td>
                 <td>2016-03-17 12:00</td>
-                <td>2016-03-17 12:00</td>
+                <td>1:00</td>
+                <td>Studying for Circuits</td>
               </tr>
               <tr>
-                <td>Alan</td>
-                <td>Jellybean</td>
-                <td>$3.76</td>
-              </tr>
-              <tr>
-                <td>Jonathan</td>
-                <td>Lollipop</td>
-                <td>$7.00</td>
+                <td>Anand Patel</td>
+                <td>K360</td>
+                <td>2016-04-20 5:00</td>
+                <td>6:00</td>
+                <td>Studying for Midterms</td>
               </tr>
             </tbody>
       		</table>
