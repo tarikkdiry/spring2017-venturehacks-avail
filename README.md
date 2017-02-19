@@ -1,7 +1,7 @@
-# Avail(ability) - Crowdsourced Classroom Reservation System
+# Avail(ability)
 
 ![](https://raw.githubusercontent.com/Au1st3in/spring2017-venturehacks-avail/master/public/img/screenshot.png)
-Avail landing page with Google authentication
+Materialize landing page with Firebase integration
 
 ## Group
 * Austin Rocha (@Au1st3in)

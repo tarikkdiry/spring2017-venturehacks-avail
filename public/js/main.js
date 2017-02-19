@@ -38,9 +38,9 @@ function login() {
     // You are now signed in! Do with it what you like!
     firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
-        window.location.replace('http://localhost:3000/avail');
+
       } else {
-        window.location.replace('http://localhost:3000/');
+
       }
     });
 
