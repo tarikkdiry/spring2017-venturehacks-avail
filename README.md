@@ -4,10 +4,10 @@
 Materialize landing page with Firebase integration
 
 ## Group
-* Austin Rocha (@Au1st3in)
-* Tarik Kdiry (@tarikkdiry)
-* Anand Patel (@ThePatelBros)
-* Dhru Patel (@dhrupatel1037)
+* Austin Rocha (https://github.com/Au1st3in)
+* Tarik Kdiry (https://github.com/tarikkdiry)
+* Anand Patel (https://github.com/ThePatelBros)
+* Dhru Patel (https://github.com/dhrupatel1037)
 
 ## Credits
 * Materialize (https://github.com/Dogfalo/materialize)
