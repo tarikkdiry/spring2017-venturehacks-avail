@@ -33,7 +33,7 @@
         <h1 class="header center"><br><img src="../img/avail-whiteLogo.png" height="25%" width="25%"><br></h1>
         <h5 class="header col s12 light center">Classroom Reservation Form<br><br><br></h5>
         <div class="row">
-            <form onsubmit='getFormData()' method='post'>
+            <form onsubmit='return false' method='post'>
               <div class="row">
                 <div class="col s1">
                   <p><br><br><br><p>
@@ -43,7 +43,7 @@
                   <label for="icon_prefix"><p><br>Full&nbsp;Name</p></label>
                 </div>
                 <div class="input-field col s4">
-                  <input type='text' name='name' id='name' class="validate">
+                  <input type='text' name='name' id='name'>
                 </div>
                 <div class="col s1">
                 </div>
@@ -74,7 +74,6 @@
                 <div class="input-field col s3" id='burchard'>
                   <label><p><br> &nbsp; &nbsp; Room</p></label>
                   <select class="browser-default black-text" id='burchard'>
-                    <option value="" disabled selected id='default'>None</option>
                     <option value='b118'>B118</option>
                     <option value='b123'>B123</option>
                     <option value='b126'>B126</option>
@@ -91,7 +90,6 @@
                 <div class="input-field col s3" id='babbio'>
                   <label><p><br> &nbsp; &nbsp; Room</p></label>
                   <select class="browser-default black-text" id='babbio'>
-                    <option value="" disabled selected id='default'>None</option>
                     <option value='bc104'>BC104</option>
             				<option value='bc110'>BC110</option>
             				<option value='bc122'>BC122</option>
@@ -117,7 +115,6 @@
                 <div class="input-field col s3" id='carnegie'>
                   <label><p><br> &nbsp; &nbsp; Room</p></label>
                   <select class="browser-default black-text" id='carnegie'>
-                    <option value="" disabled selected id='default'>None</option>
                     <option value='c315'>C315</option>
             				<option value='c316'>C316</option>
                   </select>
@@ -125,7 +122,6 @@
                 <div class="input-field col s3" id="eas">
                   <label><p><br> &nbsp; &nbsp; Room</p></label>
                   <select class="browser-default black-text" id="eas">
-                    <option value="" disabled selected id='default'>None</option>
                     <option value='e130'>E130</option>
             				<option value='e222'>E222</option>
             				<option value='e229'>E229</option>
@@ -139,7 +135,6 @@
                 <div class="input-field col s3" id='kidde'>
                   <label><p><br> &nbsp; &nbsp; Room</p></label>
                   <select class="browser-default black-text" id='kidde'>
-                    <option value="" disabled selected id='default'>None</option>
                     <option value='k228'>K228</option>
             				<option value='k360'>K360</option>
             				<option value='k390'>K390</option>
@@ -148,14 +143,12 @@
                 <div class="input-field col s3" id='lieb'>
                   <label><p><br> &nbsp; &nbsp; Room</p></label>
                   <select class="browser-default black-text" id='lieb'>
-                    <option value="" disabled selected id='default'>None</option>
                     <option value="l120">L120</option>
                   </select>
                 </div>
                 <div class="input-field col s3" id='morton'>
                   <label><p><br> &nbsp; &nbsp; Room</p></label>
                   <select class="browser-default black-text" id='morton'>
-                    <option value="" disabled selected id='default'>None</option>
                     <option value='m103'>M103</option>
             				<option value='m105'>M105</option>
             				<option value='m205'>M205</option>
@@ -165,7 +158,6 @@
                 <div class="input-field col s3" id='pierce'>
                   <label><p><br> &nbsp; &nbsp; Room</p></label>
                   <select class="browser-default black-text" id='pierce'>
-                    <option value="" disabled selected id='default'>None</option>
                     <option value='p116'>P116</option>
             				<option value='p120'>P120</option>
             				<option value='p216'>P216</option>
@@ -176,7 +168,6 @@
                 <div class="input-field col s3" id='mclean'>
                   <label><p><br> &nbsp; &nbsp; Room</p></label>
                   <select class="browser-default black-text" id='pierce'>
-                    <option value="" disabled selected id='default'>None</option>
                     <option value='x104'>X104</option>
             				<option value='x105'>X105</option>
             				<option value='x106'>X106</option>
@@ -193,25 +184,25 @@
                 <div class="input-field col">
                   <i class="material-icons prefix"><br>today</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </div>
-                <div class="input-field col s2">
+                <div class="input-field col s3">
                   <label><p><br>Start Date & Time</p></label><p></p>
-                  <input type='datetime-local' id='starttime' name='starttime' class="datepicker center">
+                  <input type='datetime-local' id='starttime' name='starttime' class="datepicker center validate">
                 </div>
                 <div class="input-field col">
                   <i class="material-icons prefix"><br>schedule</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </div>
-                <div class="input-field col s2">
+                <div class="input-field col s1">
                   <label><p><br>End Time</p></label><p></p>
-                  <input type='time' id='endtime' name='endtime' class="datepicker center">
+                  <input type='time' id='endtime' name='endtime' class="datepicker center validate">
                 </div>
                 <div class="col s1">
                 </div>
                 <div class="input-field col">
                   <i class="material-icons prefix"><br>mode_edit</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <label for="reason"><p><br><br>Reason</p></label>
+                  <label for="reason"><p><br>Reason</p></label>
                 </div>
                 <div class="input-field col s4">
-                  <textarea id='reason' name='reason' class="materialize-textarea"></textarea>
+                  <p></p><input type='text' name='name' id='reason'>
                 </div>
               </div>
               <div class="row">
@@ -222,7 +213,7 @@
                     </div>
                     <div class="col s2">
                       <p><br></p>
-                      <input type='submit' class="waves-effect waves-light btn" value="Request Room">
+                      <button id='submit' onclick="formData()" class="waves-effect waves-light btn">Request Room</button>
                     </div>
                   </div>
                 </form>
@@ -241,7 +232,39 @@
   <div class="container">
     <div class="section">
       <div class="row">
-        <div class="col s12 m4">
+        <div class="col s1">
+        </div>
+        <div class="col s10">
+
+          <table id="myTableData" class="striped">
+            <thead>
+              <tr>
+                <th>Reserver</th>
+                <th>Location</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Reason</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Austin Rocha</td>
+                <td>BC212</td>
+                <td>2016-03-17 12:00</td>
+                <td>2016-03-17 12:00</td>
+              </tr>
+              <tr>
+                <td>Alan</td>
+                <td>Jellybean</td>
+                <td>$3.76</td>
+              </tr>
+              <tr>
+                <td>Jonathan</td>
+                <td>Lollipop</td>
+                <td>$7.00</td>
+              </tr>
+            </tbody>
+      		</table>
 
         </div>
       </div>
@@ -251,8 +274,8 @@
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="grey-text darken-5">Lorem ipsum</h5>
-          <p class="grey-text darken-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacinia auctor velit. Nulla sit amet risus finibus, suscipit neque at, condimentum mi.</p>
+          <h5 class="grey-text darken-5">About the Team</h5>
+          <p class="grey-text darken-4">To put it simply, we are a group of college students that came together under a specific pain and are trying to make solution within the time restrictions of Venture Hacks Red.</p>
         </div>
         <div class="col l3 s12 center">
           <img src="../img/venturehacks-redLogo.png" href="https://venturehacks.xyz/" height="45%" width="45%">
@@ -274,128 +297,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
   <script src="../js/main.js"></script>
-  <script>
-    function dropdown(val) {
-      if(val=='') {
-        $("#default").show();
-        $("#burchard").hide();
-        $("#babbio").hide();
-        $('#carnegie').hide();
-        $('#eas').hide();
-        $('#kidde').hide();
-        $('#lieb').hide();
-        $('#morton').hide();
-        $('#pierce').hide();
-        $('#mclean').hide();
-      } else if(val=='burchard') {
-        $("#default").hide();
-        $("#burchard").show();
-        $("#babbio").hide();
-        $('#carnegie').hide();
-        $('#eas').hide();
-        $('#kidde').hide();
-        $('#lieb').hide();
-        $('#morton').hide();
-        $('#pierce').hide();
-        $('#mclean').hide();
-      } else if(val=='babbio') {
-        $("#default").hide();
-        $("#burchard").hide();
-        $("#babbio").show();
-        $('#carnegie').hide();
-        $('#eas').hide();
-        $('#kidde').hide();
-        $('#lieb').hide();
-        $('#morton').hide();
-        $('#mclean').hide();
-        $('#pierce').hide();
-      } else if(val=='carnegie') {
-        $("#default").hide();
-        $("#burchard").hide();
-        $("#babbio").hide();
-        $('#carnegie').show();
-        $('#eas').hide();
-        $('#kidde').hide();
-        $('#lieb').hide();
-        $('#morton').hide();
-        $('#mclean').hide();
-        $('#pierce').hide();
-      } else if(val=='eas') {
-        $("#default").hide();
-        $("#burchard").hide();
-        $("#babbio").hide();
-        $('#carnegie').hide();
-        $('#eas').show();
-        $('#kidde').hide();
-        $('#lieb').hide();
-        $('#morton').hide();
-        $('#mclean').hide();
-        $('#pierce').hide();
-      } else if(val=='kidde') {
-        $("#default").hide();
-        $("#burchard").hide();
-        $("#babbio").hide();
-        $('#carnegie').hide();
-        $('#eas').hide();
-        $('#kidde').show();
-        $('#lieb').hide();
-        $('#morton').hide();
-        $('#mclean').hide();
-        $('#pierce').hide();
-      } else if(val=='lieb') {
-        $("#default").hide();
-        $("#burchard").hide();
-        $("#babbio").hide();
-        $('#carnegie').hide();
-        $('#eas').hide();
-        $('#kidde').hide();
-        $('#lieb').show();
-        $('#morton').hide();
-        $('#mclean').hide();
-        $('#pierce').hide();
-      } else if(val=='morton') {
-        $("#default").hide();
-        $("#burchard").hide();
-        $("#babbio").hide();
-        $('#carnegie').hide();
-        $('#eas').hide();
-        $('#kidde').hide();
-        $('#lieb').hide();
-        $('#morton').show();
-        $('#mclean').hide();
-        $('#pierce').hide();
-      } else if(val=='mclean') {
-        $("#default").hide();
-        $("#burchard").hide();
-        $("#babbio").hide();
-        $('#carnegie').hide();
-        $('#eas').hide();
-        $('#kidde').hide();
-        $('#lieb').hide();
-        $('#morton').hide();
-        $('#mclean').show();
-        $('#pierce').hide();
-      } else if(val=='pierce') {
-        $("#default").hide();
-        $("#burchard").hide();
-        $("#babbio").hide();
-        $('#carnegie').hide();
-        $('#eas').hide();
-        $('#kidde').hide();
-        $('#lieb').hide();
-        $('#morton').hide();
-        $('#mclean').hide();
-        $('#pierce').show();
-      }
-    }
-    function getFormData() {
-      var name = $('#name').val();
-      var building = $('#building option:selected').text();
-      var room = visible_dropdown
-      var starttime = $('#starttime').val();
-      var endtime = $('#endtime').val();
-      var reason = $('#reason').val();
-    }
-  </script>
+  <script src="../js/forms.js"></script>
   </body>
 </html>
