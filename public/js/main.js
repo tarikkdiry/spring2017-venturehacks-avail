@@ -24,7 +24,7 @@ function login() {
     var domain = email.replace(/.*@/, "");
 
     if(domain != "stevens.edu"){
-      var token = null
+      throw 'bad domain';
     }
 
     // Here is where you would change what is showing on the screen (views)
@@ -37,12 +37,12 @@ function login() {
 
     // You are now signed in! Do with it what you like!
     firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-      window.location.replace(http://localhost:3000/avail);
-    } else {
-      window.location.replace(http://localhost:3000/);
-    }
-});
+      if (user) {
+        window.location.replace('http://localhost:3000/avail');
+      } else {
+        window.location.replace('http://localhost:3000/');
+      }
+    });
 
   }).catch(function (error) {
     // Handle Errors here.
