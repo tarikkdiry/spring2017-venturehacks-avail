@@ -1,5 +1,6 @@
 			var visible_dropdown;
 			var name, room, starttime, endtime, reason, result;
+			var gym_full;
 			function dropdown(val) {
 				if(val=='') {
 					$("#default").show();
@@ -15,7 +16,6 @@
 				} else if(val=='burchard') {
 					$("#default").hide();
 					$("#burchard").show();
-					visible_dropdown = '#burchard'
 					visible_dropdown = $('#burchard option:selected').text();
 					$("#babbio").hide();
 					$('#carnegie').hide();
@@ -127,6 +127,7 @@
 			function formData() {
 				name = $('#name').val();
 				room = visible_dropdown;
+				alert(room);
 				starttime = $('#starttime').val().split("T").join(" ");
 				endtime = $('#endtime').val();
 				reason = $('#reason').val();
@@ -143,7 +144,7 @@
 				//alert(result);
 				if(complete){
 					updateTable();
-				}else{
+				} else {
 				return false;
 				}
 			}
@@ -161,4 +162,20 @@
 					var j = row.insertCell(i);
 					j.innerHTML = data[i];
 				}
+			}
+			
+			function submitForm() {
+				var selected = $('input[name=gym-full]:checked').val();
+				if (selected=='yes'){
+					gym_full = true;
+				} else {
+					gym_full = false;
+				}
+			}
+			
+			function postGymStatus() {
+				
+				var locate = window.location;
+				var val = locate.substring(str.indexOf("=")+1);
+				document.getElementById("gym-status").innerHTML = val;
 			}
