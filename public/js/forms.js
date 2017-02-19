@@ -126,11 +126,26 @@
 			
 			function formData() {
 				name = $('#name').val();
-				room = visible_dropdown
-				starttime = $('#starttime').val();
+				room = visible_dropdown;
+				starttime = $('#starttime').val().split("T").join(" ");
 				endtime = $('#endtime').val();
 				reason = $('#reason').val();
 				result = [name, room, starttime, endtime, reason];
+				
+				var complete=true;
+				for(var i=0; i<result.length;i++){
+					if (result[i]=="" || result[i] == "undefined" || $('#building').val() == 'empty'){
+						alert("Please fill out all inputs.");
+						complete=false;
+						break;
+					}
+				}
+				//alert(result);
+				if(complete){
+					updateTable();
+				}else{
+				return false;
+				}
 			}
 			
 			function getFormData() {
@@ -139,5 +154,11 @@
 			}
 			
 			function updateTable() {
-			
+				var data =  getFormData();
+			    var table = document.getElementById("myTableData");
+				var row = table.insertRow(1);
+				for (var i=0; i<data.length;i++){
+					var j = row.insertCell(i);
+					j.innerHTML = data[i];
+				}
 			}
