@@ -3,6 +3,10 @@
 ![](https://raw.githubusercontent.com/Au1st3in/spring2017-venturehacks-avail/master/public/img/screenshot.png)
 Materialize landing page with Firebase integration
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Au1st3in/spring2017-venturehacks-avail/master/public/img/win_crowd.png?raw=true" width="50%" height="50%" />
+</p>
+
 ## Group
 * Austin Rocha (https://github.com/Au1st3in)
 * Tarik Kdiry (https://github.com/tarikkdiry)
